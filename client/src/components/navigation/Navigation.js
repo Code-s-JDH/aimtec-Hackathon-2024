@@ -1,25 +1,23 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLanguage } from '@fortawesome/free-solid-svg-icons'
+import { faLanguage, faInfo, faHashtag, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons'
+import IconBtn from '../../ui/buttons/iconBtn/iconBtn'
 
 const Navigation = () => {
   return (
-    <nav className='bottomNavBar'>
+    <nav>
       <div>
         <NavLink to="/">
-          <FontAwesomeIcon icon={faLanguage} />
+          <IconBtn icon={faLanguage} />
         </NavLink>
-        <NavLink to="/" id='heart'>
-          <FontAwesomeIcon icon={faLanguage} />
+        <NavLink to="/info">
+          <IconBtn icon={faInfo} />
         </NavLink>
-        <NavLink to="/">
-        </NavLink>
-        <NavLink to="/" id='heart'>
-          <FontAwesomeIcon icon={faLanguage} />
+        <NavLink to="/blog">
+          <IconBtn icon={faHashtag} />
         </NavLink>
         <NavLink to="/">
-          <FontAwesomeIcon icon={faLanguage} />
+          <IconBtn icon={faCircleHalfStroke} />
         </NavLink>
       </div>
     </nav>
