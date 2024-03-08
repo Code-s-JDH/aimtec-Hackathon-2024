@@ -1,8 +1,23 @@
+* {
+  --main_color: #FFFFFF;
+  
+  --primary_color: #F0F0F0;
+
+  --secondary_color: #505050;
+
+  --active_color: #282828;
+
+  --border_color: #64646433;
+
+  --primary_font: Verdana, Geneva, Tahoma, sans-serif;
+
+  --secondary_font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--main_color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +25,36 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.border{
+  border-radius: 10px;
+  background-color: var(--primary_color);
+  border: solid 1px var(--border_color);
+}
+
+h1{
+  font-family: var(--primary_font);
+  color: var(--secondary_color);
+}
+
+h2{
+  font-family: var(--primary_font);
+  color: var(--secondary_color);
+}
+
+h3{
+  font-family: var(--primary_font);
+  color: var(--secondary_color);
+}
+
+p{
+  font-family: var(--secondaryfont);
+  color: var(--secondary_color);
+}
+
+a{
+  font-family: var(--primary_font);
+  text-decoration: none;
+  color: var(--secondary_color);
 }
