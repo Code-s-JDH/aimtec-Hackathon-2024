@@ -9,11 +9,11 @@ const Navigation = () => {
 
   const switchTheme = () => {
     setDarkMode(!darkMode);
-    document.documentElement.style.setProperty('--main_color', darkMode ? 'var(--main_color)' : 'var(--main_color_dark)');
-    document.documentElement.style.setProperty('--primary_color', darkMode ? 'var(--primary_color)' : 'var(--primary_color_dark)');
-    document.documentElement.style.setProperty('--secondary_color', darkMode ? 'var(--secondary_color)' : 'var(--secondary_color_dark)');
-    document.documentElement.style.setProperty('--active_color', darkMode ? 'var(--active_color)' : 'var(--active_color_dark)');
-    document.documentElement.style.setProperty('--border_color', darkMode ? 'var(--border_color)' : 'var(--border_color_dark)');
+    document.documentElement.style.setProperty('--main_color', darkMode ? '' : 'var(--main_color_dark)');
+    document.documentElement.style.setProperty('--primary_color', darkMode ? '' : 'var(--primary_color_dark)');
+    document.documentElement.style.setProperty('--secondary_color', darkMode ? '' : 'var(--secondary_color_dark)');
+    document.documentElement.style.setProperty('--active_color', darkMode ? '' : 'var(--active_color_dark)');
+    document.documentElement.style.setProperty('--border_color', darkMode ? '' : 'var(--border_color_dark)');
   };
 
   return (
