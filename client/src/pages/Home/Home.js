@@ -4,6 +4,11 @@ import { textToSpeech, speechToText, textToSymbols, symbolsToText } from '../../
 
 import './home.css';
 
+
+import TranslateInput from "../../components/translateInput/TranslateInput"
+import TranslateOutput from "../../components/translateOutput/TranslateOutput"
+
+
 const Home = () => {
   const [speechBase64, setSpeechBase64] = useState('');
   const [resultText, setResultText] = useState('');
@@ -35,8 +40,11 @@ const Home = () => {
   };
 
   return (
-    <div></div>
-  );
-};
+    <div className='translator'>
+      <TranslateInput />
+      <TranslateOutput />
+    </div>
+  )
+}
 
 export default Home;
