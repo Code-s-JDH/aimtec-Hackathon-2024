@@ -1,4 +1,5 @@
 * {
+  /* Lightmod colors */
   --main_color: #FFFFFF;
   
   --primary_color: #F0F0F0;
@@ -9,6 +10,18 @@
 
   --border_color: #64646433;
 
+    /* Darkmod colors */
+  --main_color_dark: #FFFFFF;
+  
+  --primary_color_dark: #F0F0F0;
+
+  --secondary_color_dark: #505050;
+
+  --active_color_dark: #282828;
+
+  --border_color_dark: #64646433;
+
+   /* Fonts */
   --primary_font: Verdana, Geneva, Tahoma, sans-serif;
 
   --secondary_font: Verdana, Geneva, Tahoma, sans-serif;
