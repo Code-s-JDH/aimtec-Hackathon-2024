@@ -1,0 +1,126 @@
+.register {
+    color: #000;
+    height: 80vh;
+    width: 80%;
+}
+
+.register > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 575px;
+    border-radius: 25px;
+    background: #FFF;
+}
+
+.register form {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register p.fontHeader2 {
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.register form div {
+    width: 40%;
+    position: relative;
+}
+
+.register form input {
+    overflow: hidden;
+    margin: 10px auto;
+    margin-bottom: 0;
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    height: 40px;
+    width: 100%;
+}
+
+.register button {
+    height: 60px;
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+}
+
+.register p:last-child {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    bottom: 20px;
+}
+
+.register a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.register label {
+    position: absolute;
+    margin-top: 20px;
+    right: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .register {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .register > div {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .register {
+        height: 110vh;
+    }
+
+    .register > div {
+        width: 90%;
+        height: 650px;
+    }
+
+    .register form {
+        margin: 0px auto;
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .register form div {
+        width: 100%;
+    }
+}

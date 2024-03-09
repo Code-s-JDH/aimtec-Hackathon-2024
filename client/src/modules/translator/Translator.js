@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { startRecording, stopRecording } from '../../service/audioService';
 import { speechToText, textToSpeech } from '../../service/translatorApi';
+import Camera from '../../components/camera/Camera';
 import './translator.css';
 
 import TranslateInput from "../../components/translateInput/TranslateInput";
@@ -23,6 +24,7 @@ const Translator = () => {
   const handleStopRecording = async () => {
     try {
       await stopRecording();
+      const response = await speechToText("1234123414323454", "en", "en");
       console.log(base64data);
     } catch (error) {
       console.error('Chyba při zastavení nahrávání zvuku:', error);
@@ -43,11 +45,13 @@ const Translator = () => {
 
   return (
     <div className='translator'>
+      <button onClick={handleTextToSpeech}></button>
       <TranslateInput
         onStartRecording={handleStartRecording}
         onStopRecording={handleStopRecording}
       />
       <TranslateOutput />
+      <Camera></Camera>
     </div>
   );
 };

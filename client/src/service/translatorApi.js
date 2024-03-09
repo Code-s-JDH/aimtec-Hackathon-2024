@@ -1,15 +1,18 @@
 import axios from '../api/axios';
 import config from '../config/config';
 
+const api="http://100.100.137.86:3000/api/v1/workWT"
+
 const textToSpeech = async (text, textLanguage, textToLanguage) => {
   try {
-    const response = await axios.post(`${config.apiUrl}/TextToSpeech`, {
+    const response = await axios.post(`${api}/TextToSpeech`, {
       text,
       textLanguage,
       textToLanguage,
     });
 
-    return response.data.speech;
+    console.log(response.data)
+    return response.data;
   } catch (error) {
     throw error;
   }
@@ -17,13 +20,14 @@ const textToSpeech = async (text, textLanguage, textToLanguage) => {
 
 const speechToText = async (speech, speechLanguage, speechToLanguage) => {
   try {
-    const response = await axios.post(`${config.apiUrl}/SpeachToText`, {
+    console.log(config.apiUrl)
+    const response = await axios.post(`${api}/SpeechToText`, {
       speech,
       speechLanguage,
       speechToLanguage,
     });
 
-    return response.data.text;
+    return response.data;
   } catch (error) {
     throw error;
   }
