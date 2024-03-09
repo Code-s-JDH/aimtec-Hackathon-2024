@@ -15,7 +15,9 @@ const TranslateOutput = () => {
         <IconBtn icon={faArrowDown}></IconBtn>
         <div className='invisibleDiv'></div>
       </div>
-      <div className='translateOutput'></div>
+      <div className='translateOutput'>
+        <p></p>
+      </div>
 
     </div>
   )
