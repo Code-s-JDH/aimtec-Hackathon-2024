@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalContext';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -20,9 +21,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/*" element={<App />} />
-      </Routes>
+      <GlobalProvider>
+        <Routes>
+          <Route path="/*" element={<App />} />
+        </Routes>
+      </GlobalProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

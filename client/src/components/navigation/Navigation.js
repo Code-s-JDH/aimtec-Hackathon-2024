@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { faLanguage, faInfo, faHashtag, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import IconBtn from '../../ui/buttons/iconBtn/iconBtn';
 import './navigation.css';
+import { useTheme } from '../../context/ThemeContext';
 
 const Navigation = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const switchTheme = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.style.setProperty('--main_color', darkMode ? '' : 'var(--main_color_dark)');
-    document.documentElement.style.setProperty('--primary_color', darkMode ? '' : 'var(--primary_color_dark)');
-    document.documentElement.style.setProperty('--secondary_color', darkMode ? '' : 'var(--secondary_color_dark)');
-    document.documentElement.style.setProperty('--active_color', darkMode ? '' : 'var(--active_color_dark)');
-    document.documentElement.style.setProperty('--border_color', darkMode ? '' : 'var(--border_color_dark)');
-  };
+  const { darkMode, toggleTheme } = useTheme();
 
   return (
-    <nav>
+    <nav className={darkMode ? 'dark-mode' : 'light-mode'}>
       <div className='links'>
         <NavLink to="/">
           <IconBtn icon={faLanguage} />
@@ -28,7 +20,7 @@ const Navigation = () => {
         <NavLink to="/blog">
           <IconBtn icon={faHashtag} />
         </NavLink>
-        <IconBtn icon={faCircleHalfStroke} onClick={switchTheme} />
+        <IconBtn icon={faCircleHalfStroke} onClick={toggleTheme} />
       </div>
     </nav>
   );
