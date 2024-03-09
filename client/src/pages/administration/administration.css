@@ -1,0 +1,26 @@
+.administration h1{
+    text-align: center;
+}
+.postRequest{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.postTitle{
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: var(--primary_color);
+    border: solid 1px var(--border_color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.postText{
+    width: 100%;
+    height: 400px;
+    margin: 10px auto;
+    resize: none;
+    border-radius: 5px;
+    background-color: var(--primary_color);
+    border: solid 1px var(--border_color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
