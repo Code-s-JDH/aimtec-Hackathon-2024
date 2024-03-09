@@ -1,0 +1,24 @@
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--primary_color);
+    border: solid 1px var(--border_color);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px; 
+}
+
+.iconBtn {
+    color: var(--secondary_color);
+    font-size: 30px;
+}
+
+.iconBtn:hover {
+    color: var(--active_color);
+}
