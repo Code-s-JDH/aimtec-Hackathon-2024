@@ -77,3 +77,15 @@ a{
   text-decoration: none;
   color: var(--secondary_color);
 }
+textarea{
+  font-family: var(--secondaryfont);
+  color: var(--secondary_color);
+}
+input{
+  font-family: var(--secondaryfont);
+  color: var(--secondary_color);
+}
+div{
+  font-family: var(--secondaryfont);
+  color: var(--secondary_color);
+}
