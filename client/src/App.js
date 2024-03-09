@@ -4,10 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Routes>
-      {/* <Route index element={<Home />} />
-      <Route index element={<Info />} />
-      <Route index element={<Blog />} /> */}
-      {/* <Route index element={<Theme />} /> */}
+      <Route index element={<Home />} />
+      <Route path='info' element={<Info />} />
+      <Route path='blog' element={<Blog />} />
     </Routes>
   );
 }
