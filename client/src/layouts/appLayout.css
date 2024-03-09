@@ -4,5 +4,6 @@
 }
 .image_logo{
     margin: 0 auto;
-    width: 100%;
+    width:100%;
+    color: var(--secondary_color);
 }
