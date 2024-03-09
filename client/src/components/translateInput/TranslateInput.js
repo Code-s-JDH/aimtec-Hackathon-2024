@@ -9,10 +9,6 @@ const TranslateInput = ({ onStartRecording, onStopRecording }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [typingTimeout, setTypingTimeout] = useState(null);
 
-  const [isVisible, setVisibility] = useState(false);
-  const Visibility = () => {
-      setVisibility(!isVisible);
-
   const handleRecordingToggle = () => {
     if (isRecording) {
       onStopRecording();

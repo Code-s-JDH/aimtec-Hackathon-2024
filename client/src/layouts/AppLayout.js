@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
 import Navigation from '../components/navigation/Navigation'
 import "./appLayout.css"
-import logo from "../media/sprites/logo_deaflator.svg"
+import logo from "../media/sprites/logo.png"
 
 const AppLayout = () => {
   return (<div id='mainWrapper'>
-    <h1 className='mainHeader'>DEAFLATOR</h1>
+    <img className="image_logo" src={logo} alt="" />
     <Outlet></Outlet>
     <Navigation />
   </div>

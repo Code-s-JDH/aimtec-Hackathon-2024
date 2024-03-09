@@ -6,8 +6,8 @@ const Administration = () => {
         <div className="administration">
             <h1>Administration</h1>
             <div className='postRequest border'>
-            <input className='postTitle' type="text" />
-            <textarea className='postText'></textarea>
+                <input className='postTitle' type="text" />
+                <textarea className='postText'></textarea>
             </div>
         </div>
     );

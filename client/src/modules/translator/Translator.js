@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { startRecording, stopRecording } from '../../service/audioService';
 import { speechToText, textToSpeech } from '../../service/translatorApi';
-import GestureRecognition from '../../components/camera2/Camera2';
+import Camera from '../../components/camera/Camera'
 import './translator.css';
 
 import TranslateInput from "../../components/translateInput/TranslateInput";
 import TranslateOutput from "../../components/translateOutput/TranslateOutput";
-import IconBtn from '../../ui/buttons/iconBtn/iconBtn';
 
 const Translator = () => {
 
@@ -46,16 +45,14 @@ const Translator = () => {
 
   return (
     <div className='translator'>
-      <button ></button>
+      <button onClick={handleTextToSpeech}></button>
       <TranslateInput
         onStartRecording={handleStartRecording}
         onStopRecording={handleStopRecording}
       />
       <TranslateOutput />
       {/* <Camera></Camera> */}
-      <GestureRecognition></GestureRecognition>
     </div>
-    
   );
 };
 
