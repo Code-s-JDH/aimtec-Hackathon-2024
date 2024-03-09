@@ -1,6 +1,6 @@
 const config = {
   // apiUrl: process.env.REACT_APP_API_URL,
-  apiUrl: "http://100.100.137.86:3000/api",
+  apiUrl: "https://wlsrr6nxdtxbrryyca6abxbnw40zmugq.lambda-url.eu-west-1.on.aws",
 };
 
 export default config;
