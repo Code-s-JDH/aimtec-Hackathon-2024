@@ -11,15 +11,15 @@
   --border_color: #64646433;
 
     /* Darkmod colors */
-  --main_color_dark: #FFFFFF;
+  --main_color_dark: #141414;
   
-  --primary_color_dark: #F0F0F0;
+  --primary_color_dark: #141414;
 
-  --secondary_color_dark: #505050;
+  --secondary_color_dark: #C8C8C8;
 
-  --active_color_dark: #282828;
+  --active_color_dark: #FFFFFF;
 
-  --border_color_dark: #64646433;
+  --border_color_dark: #14141433;
 
    /* Fonts */
   --primary_font: Verdana, Geneva, Tahoma, sans-serif;
