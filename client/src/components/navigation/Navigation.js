@@ -9,11 +9,11 @@ const Navigation = () => {
 
   const switchTheme = () => {
     setDarkMode(!DarkMode);
-    document.documentElement.style.setProperty('--main_color', DarkMode ? '--main_color' : '--main_color_dark');
-    document.documentElement.style.setProperty('--primary_color', DarkMode ? '--primary_color' : '--primary_color_dark');
-    document.documentElement.style.setProperty('--secondary_color', DarkMode ? '--secondary_color' : '--secondary_color_dark');
-    document.documentElement.style.setProperty('--active_color', DarkMode ? '--active_color: #282828;' : '--active_color_dark');
-    document.documentElement.style.setProperty('--border_color', DarkMode ? '--border_color: #282828;' : '--border_color_dark');
+    document.documentElement.style.setProperty('--main_color', DarkMode ? '--main_color' : '#141414');
+    document.documentElement.style.setProperty('--primary_color', DarkMode ? '--primary_color' : '#141414');
+    document.documentElement.style.setProperty('--secondary_color', DarkMode ? '--secondary_color' : '#C8C8C8');
+    document.documentElement.style.setProperty('--active_color', DarkMode ? '--active_color: #282828;' : '#FFFFFF');
+    document.documentElement.style.setProperty('--border_color', DarkMode ? '--border_color: #282828;' : '#14141433');
   };
 
   return (

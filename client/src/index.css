@@ -1,3 +1,11 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.5s;
+}
+
 :root {
   /* Lightmod colors */
   --main_color: #FFFFFF;
@@ -28,8 +36,6 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
   background-color: var(--main_color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
