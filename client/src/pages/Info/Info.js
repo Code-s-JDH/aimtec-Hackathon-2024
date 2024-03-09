@@ -16,7 +16,7 @@ const Info = () => {
     <h1>Technologie 3. stran</h1>
     <nl>
     <li>API- AWS Polly</li>
-    <li></li>
+    <li>API- 3D Hand Pose with MediaPipe and TensorFlow.js</li>
     <li></li>
     </nl>
     </div>
