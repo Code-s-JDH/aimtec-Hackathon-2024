@@ -2,8 +2,11 @@
     margin: 0 auto;
     max-width: 800px;
 }
-.image_logo{
+.mainHeader{
     margin: 0 auto;
     width:100%;
     color: var(--secondary_color);
+    font-weight: bold;
+    font-size: 600%;
+    text-align: center;
 }

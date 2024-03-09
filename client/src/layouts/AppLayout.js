@@ -5,7 +5,7 @@ import logo from "../media/sprites/logo_deaflator.svg"
 
 const AppLayout = () => {
   return (<div id='mainWrapper'>
-    <img className="image_logo" src={logo} alt="" />
+    <h1 className='mainHeader'>DEAFLATOR</h1>
     <Outlet></Outlet>
     <Navigation />
   </div>
