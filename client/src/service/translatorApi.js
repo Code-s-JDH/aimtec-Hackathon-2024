@@ -20,7 +20,7 @@
 import axios from "../api/axios";
 
 const textToSpeech = async (text, textLanguage, textToLanguage) => {
-  const { response } = await axios.post('http://wlsrr6nxdtxbrryyca6abxbnw40zmugq.lambda-url.eu-west-1.on.aws/', {
+  const { response } = await axios.post('https://wlsrr6nxdtxbrryyca6abxbnw40zmugq.lambda-url.eu-west-1.on.aws/', {
     text: text,
     textLanguage: textLanguage,
     textToLanguage: textToLanguage,
@@ -36,7 +36,7 @@ const textToSpeech = async (text, textLanguage, textToLanguage) => {
 };
 
 
-const {data} = await axios.post('http://wlsrr6nxdtxbrryyca6abxbnw40zmugq.lambda-url.eu-west-1.on.aws', {
+const {data} = await axios.post('https://wlsrr6nxdtxbrryyca6abxbnw40zmugq.lambda-url.eu-west-1.on.aws', {
     text: 'Tohle mi preloz',
     textLanguage: 'cs',
     textToLanguage: 'en',
