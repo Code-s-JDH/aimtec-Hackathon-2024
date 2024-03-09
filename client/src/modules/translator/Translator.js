@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { startRecording, stopRecording } from '../../service/audioService';
 import { speechToText, textToSpeech } from '../../service/translatorApi';
-import Camera from '../../components/camera/Camera';
+import GestureRecognition from '../../components/camera2/Camera2';
 import './translator.css';
 
 import TranslateInput from "../../components/translateInput/TranslateInput";
@@ -51,7 +51,8 @@ const Translator = () => {
         onStopRecording={handleStopRecording}
       />
       <TranslateOutput />
-      <Camera></Camera>
+      {/* <Camera></Camera> */}
+      <GestureRecognition></GestureRecognition>
     </div>
   );
 };
