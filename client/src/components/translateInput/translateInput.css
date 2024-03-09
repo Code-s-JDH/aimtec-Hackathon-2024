@@ -1,30 +1,51 @@
-.inputWrapper{
+.inputWrapper {
     display: flex;
     flex-direction: column;
     margin: 30px;
 }
-.inputWrapper div{
+
+.inputWrapper div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px;
 }
 
-.langBtn{
+.langBtn {
     float: left;
+    cursor: pointer; /* Add cursor pointer for better UX */
 }
-.inputWrapper div div{
-    display: flex;
-    align-items: center;
-    width: 20%;
+
+.languageMenuWrapper {
+    position: relative;
+
 }
-.inputWrapper div div p{
+
+.languageMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary_color);
+    border: 1px solid var(--border_color);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+    height: 400px;
+    will-change: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.languageMenu p {
     margin: 5px;
+    cursor: pointer;
 }
-.invisibleDiv{
+
+.invisibleDiv {
     width: 20%;
 }
-.translateInput{
+
+.translateInput {
     display: flex;
     margin: 0 auto;
     padding: 5px;
