@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import IconBtn from '../../ui/buttons/iconBtn/iconBtn'
 import './translateOutput.css'
+import {faPlay} from '@fortawesome/free-solid-svg-icons';
 
 const TranslateOutput = () => {
   return (
@@ -18,7 +19,9 @@ const TranslateOutput = () => {
       <div className='translateOutput'>
         <p></p>
       </div>
-
+      <div className="playIcon">
+      <IconBtn icon={faPlay} />
+      </div>
     </div>
   )
 }

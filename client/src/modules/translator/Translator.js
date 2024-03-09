@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { startRecording, stopRecording } from '../../service/audioService';
 import { speechToText, textToSpeech } from '../../service/translatorApi';
 import GestureRecognition from '../../components/camera2/Camera2';
+import { faPlay, faStop } from '@fortawesome/free-solid-svg-icons';
 import './translator.css';
 
 import TranslateInput from "../../components/translateInput/TranslateInput";
 import TranslateOutput from "../../components/translateOutput/TranslateOutput";
+import IconBtn from '../../ui/buttons/iconBtn/iconBtn';
 
 const Translator = () => {
   const [speechBase64, setSpeechBase64] = useState('');
@@ -45,7 +47,7 @@ const Translator = () => {
 
   return (
     <div className='translator'>
-      <button onClick={handleTextToSpeech}></button>
+      <button ></button>
       <TranslateInput
         onStartRecording={handleStartRecording}
         onStopRecording={handleStopRecording}
@@ -53,7 +55,9 @@ const Translator = () => {
       <TranslateOutput />
       {/* <Camera></Camera> */}
       <GestureRecognition></GestureRecognition>
+      <IconBtn icon={textToSpeech ? faStop : faPlay} onClick={handleTextToSpeech} />
     </div>
+    
   );
 };
 
