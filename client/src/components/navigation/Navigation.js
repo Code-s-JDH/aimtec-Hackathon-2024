@@ -5,15 +5,15 @@ import IconBtn from '../../ui/buttons/iconBtn/iconBtn';
 import './navigation.css';
 
 const Navigation = () => {
-  const [DarkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const switchTheme = () => {
-    setDarkMode(!DarkMode);
-    document.documentElement.style.setProperty('--main_color', DarkMode ? '--main_color' : '#141414');
-    document.documentElement.style.setProperty('--primary_color', DarkMode ? '--primary_color' : '#141414');
-    document.documentElement.style.setProperty('--secondary_color', DarkMode ? '--secondary_color' : '#C8C8C8');
-    document.documentElement.style.setProperty('--active_color', DarkMode ? '--active_color: #282828;' : '#FFFFFF');
-    document.documentElement.style.setProperty('--border_color', DarkMode ? '--border_color: #282828;' : '#14141433');
+    setDarkMode(!darkMode);
+    document.documentElement.style.setProperty('--main_color', darkMode ? 'var(--main_color)' : 'var(--main_color_dark)');
+    document.documentElement.style.setProperty('--primary_color', darkMode ? 'var(--primary_color)' : 'var(--primary_color_dark)');
+    document.documentElement.style.setProperty('--secondary_color', darkMode ? 'var(--secondary_color)' : 'var(--secondary_color_dark)');
+    document.documentElement.style.setProperty('--active_color', darkMode ? 'var(--active_color)' : 'var(--active_color_dark)');
+    document.documentElement.style.setProperty('--border_color', darkMode ? 'var(--border_color)' : 'var(--border_color_dark)');
   };
 
   return (

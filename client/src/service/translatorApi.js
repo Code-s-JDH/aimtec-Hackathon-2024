@@ -3,7 +3,7 @@ import config from '../config/config';
 
 const textToSpeech = async () => {
   try {
-    const response = await axios.get(`${config.apiUrl}/api/category/colors`);
+    const response = await axios.post(`${config.apiUrl}/`);
     return response.data;
   } catch (error) {
     throw error;
@@ -12,7 +12,7 @@ const textToSpeech = async () => {
 
 const speechToText = async () => {
   try {
-    const response = await axios.get(`${config.apiUrl}/api/category/categories`);
+    const response = await axios.post(`${config.apiUrl}/`);
     return response.data;
   } catch (error) {
     throw error;
@@ -21,7 +21,7 @@ const speechToText = async () => {
 
 const symbolsToText = async () => {
   try {
-    const response = await axios.get(`${config.apiUrl}/api/category/categories`);
+    const response = await axios.post(`${config.apiUrl}/`);
     return response.data;
   } catch (error) {
     throw error;
