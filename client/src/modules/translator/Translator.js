@@ -50,7 +50,7 @@ const Translator = () => {
         onStartRecording={handleStartRecording}
         onStopRecording={handleStopRecording}
       />
-      <TranslateOutput />
+      <TranslateOutput resultText={resultText}/>
       {/* <Camera></Camera> */}
     </div>
   );

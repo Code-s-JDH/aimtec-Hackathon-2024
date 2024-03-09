@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faMicrophone, faCircleStop } from '@fortawesome/free-solid-svg-icons';
 import IconBtn from '../../ui/buttons/iconBtn/iconBtn';
 import { textToSpeech } from '../../service/translatorApi';
+import { useTranslator } from '../../context/TranslatorContext';
 import './translateInput.css';
 
 const TranslateInput = ({ onStartRecording, onStopRecording }) => {
+  const { storeTranslatedData } = useTranslator();
   const [isRecording, setIsRecording] = useState(false);
   const [typingTimeout, setTypingTimeout] = useState(null);
 
@@ -26,7 +28,7 @@ const TranslateInput = ({ onStartRecording, onStopRecording }) => {
     const newTypingTimeout = setTimeout(async () => {
       try {
         const response = await textToSpeech(newText, 'cs', 'en');
-        // Zpracování odpovědi od textToSpeech funkce
+        storeTranslatedData(response)
         console.log('TextToSpeech response:', response);
       } catch (error) {
         console.error('Error during textToSpeech request:', error);
