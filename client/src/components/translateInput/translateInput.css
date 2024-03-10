@@ -5,22 +5,29 @@
 }
 
 .inputWrapper div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 10px;
+
+}
+
+.inputWrapper div div{
+    display: flex;
+    justify-content: space-between;
 }
 
 .langBtn {
     float: left;
-    cursor: pointer; /* Add cursor pointer for better UX */
+    cursor: pointer; 
+    width: 20%;
 }
 
 .languageMenuWrapper {
     position: relative;
-
+    width: 20%;
 }
-
+.playButton{
+    display: flex;
+    flex-direction: column;
+}
 .languageMenu {
     position: absolute;
     top: 100%;
@@ -34,6 +41,9 @@
     will-change: 200px;
     overflow: hidden;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .languageMenu p {

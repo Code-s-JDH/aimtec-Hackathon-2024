@@ -58,7 +58,6 @@ const TranslateInput = ({ onStartRecording, onStopRecording }) => {
       <div>
         <div>
           <div className="languageMenuWrapper">
-            <div></div>
             <IconBtn className="langBtn" icon={faGlobe} onClick={handleLanguageBtnClick}></IconBtn>
             {showLanguageMenu && (
               <div className="languageMenu">

@@ -35,10 +35,7 @@ const TranslateInput = ({ }) => {
       <div>
         <div>
           <div className="languageMenuWrapper">
-            <div></div>
-            <IconBtn icon={faArrowDown}></IconBtn>
             <IconBtn className="langBtn" icon={faGlobe} onClick={handleLanguageBtnClick}></IconBtn>
-            <IconBtn icon={isPlaying ? faCircleStop : faPlay} onClick={handlePlayingToggle} />
             {showLanguageMenu && (
               <div className="languageMenu">
                 {/* Include language options here */}
@@ -86,15 +83,18 @@ const TranslateInput = ({ }) => {
               </div>
             )}
           </div>
+          <IconBtn icon={faArrowDown}></IconBtn>
           <div className='invisibleDiv'></div>
         </div>
         <textarea
           className="translateInput"
           type="text"
-          readOnly={true}
-        />
+          readOnly={true}/>
+          <div className="playButton">
+        <IconBtn  icon={isPlaying ? faCircleStop : faPlay} onClick={handlePlayingToggle} />
+        </div>
       </div>
-    </div >
+    </div>
   );
 };
 
