@@ -7,10 +7,8 @@ export const TranslatorProvider = ({ children }) => {
   const [textLang, setTextLang] = useState('cs');
   const [textToLang, setTextToLang] = useState('en-US');
 
-  const storeTranslatedData = (data, lang, toLang) => {
+  const storeTranslatedData = (data) => {
     setTranslatedVal(data);
-    setTextLang(lang);
-    setTextToLang(toLang);
   };
 
   const getTranslatedData = () => {

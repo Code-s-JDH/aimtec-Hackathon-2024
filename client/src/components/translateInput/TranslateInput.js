@@ -7,9 +7,8 @@ import { useTranslator } from '../../context/TranslatorContext';
 import './translateInput.css';
 
 const TranslateInput = ({ onStartRecording, onStopRecording }) => {
-  const { storeTranslatedData, textLang, textToLang } = useTranslator();
+  const { storeTranslatedData, setTextLang, textLang, textToLang } = useTranslator();
   const [isRecording, setIsRecording] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('cs'); // Default language is Czech
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [typingTimeout, setTypingTimeout] = useState(null);
 
@@ -39,7 +38,6 @@ const TranslateInput = ({ onStartRecording, onStopRecording }) => {
       console.log('Text changed:', newText);
     }, 1000);
 
-    // Save the timeout ID to state
     setTypingTimeout(newTypingTimeout);
   };
 
@@ -48,9 +46,8 @@ const TranslateInput = ({ onStartRecording, onStopRecording }) => {
   };
 
   const handleLanguageSelect = (language) => {
-    setSelectedLanguage(language);
+    setTextLang(language);
     setShowLanguageMenu(false);
-    storeTranslatedData({}, language, 'en'); // Prázdný objekt pro překlady při změně jazyka
   };
 
   return (
