@@ -7,7 +7,7 @@ import { useTranslator } from '../../context/TranslatorContext';
 import './translateOutput.css';
 
 const TranslateInput = ({ }) => {
-  const { storeTranslatedData, textLang, setTextToLang } = useTranslator();
+  const { translatedVal, setTextToLang } = useTranslator();
   const [isPlaying, setIsPlaying] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
@@ -27,7 +27,6 @@ const TranslateInput = ({ }) => {
   const handleLanguageSelect = (language) => {
     setTextToLang(language)
     setShowLanguageMenu(false);
-    storeTranslatedData();
   };
 
   return (
@@ -92,7 +91,7 @@ const TranslateInput = ({ }) => {
           className="translateInput"
           type="text"
           readOnly={true}
-        />
+        >{translatedVal}</textarea>
       </div>
     </div >
   );
