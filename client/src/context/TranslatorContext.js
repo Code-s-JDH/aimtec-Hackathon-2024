@@ -4,13 +4,21 @@ const TranslatorContext = createContext();
 
 export const TranslatorProvider = ({ children }) => {
   const [translatedVal, setTranslatedVal] = useState({});
+  const [textLang, setTextLang] = useState('cs');
+  const [textToLang, setTextToLang] = useState('en-US');
 
-  const storeTranslatedData = (data) => {
+  const storeTranslatedData = (data, lang, toLang) => {
     setTranslatedVal(data);
+    setTextLang(lang);
+    setTextToLang(toLang);
   };
 
   const getTranslatedData = () => {
-    return translatedVal;
+    return {
+      translatedVal,
+      textLang,
+      textToLang,
+    };
   };
 
   useEffect(() => {
@@ -19,6 +27,10 @@ export const TranslatorProvider = ({ children }) => {
 
   const translatorContextValue = {
     translatedVal,
+    textLang,
+    setTextLang,
+    setTextToLang,
+    textToLang,
     storeTranslatedData,
     getTranslatedData,
   };
